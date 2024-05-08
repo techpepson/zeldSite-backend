@@ -9,7 +9,7 @@ const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 const corsOptions = {
-  origin: "http://localhost:5173",
+  origin: "https://zeld.vercel.app",
 };
 
 app.use(cors(corsOptions));
@@ -26,7 +26,7 @@ const transporter = nodeMailer.createTransport({
   },
 });
 
-app.post("/api/send-email", (req, res) => {
+app.post("https://zeld-backend.vercel.app", (req, res) => {
   const { name, email, phone, message } = req.body;
   const mailOptions = {
     from: email,
