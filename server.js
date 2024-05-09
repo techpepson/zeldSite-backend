@@ -26,7 +26,7 @@ const transporter = nodeMailer.createTransport({
   },
 });
 
-app.post("https://zeld-backend.vercel.app", (req, res) => {
+app.post("/send-email", (req, res) => {
   const { name, email, phone, message } = req.body;
   const mailOptions = {
     from: email,
