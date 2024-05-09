@@ -12,6 +12,6 @@
   "author": "techpepson <techpepson@gmail.com>",
   "license": "MIT",
   "engines": {
-    "node": "14.x"
+    "node": "20.x"
   }
 }
