@@ -40,7 +40,12 @@ app.post("/send-email", (req, res) => {
       res.status(500).send("Error sending your details");
     } else {
       console.log("Email received from: ", name);
-      res.status(200).send("Your message is sent successfully");
+      res
+        .status(200)
+        .json({
+          message:
+            "This is a server and not meant for user's direct interaction.",
+        });
     }
   });
 });
